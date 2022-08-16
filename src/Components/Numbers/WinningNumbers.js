@@ -7,15 +7,26 @@ const WinningNumbers = (props) => {
   const generate = () => {
     for (let i = 0; i < 5; i++) {
       let num = Math.round(Math.random() * 90);
-      if (numbers.includes(num) || num === 0) {
-        generate()
+      if (duplicatorChecker(num) || num === 0) {
+        generate();
       } else {
         numbers.push(num);
+      }
+      if (numbers.length === 5){
+        return
       }
     }
   };
 
-  generate()
+  const duplicatorChecker = (number) => {
+    if (numbers.includes(number)) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  generate();
 
   return (
     <div>
