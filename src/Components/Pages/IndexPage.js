@@ -14,9 +14,9 @@ const IndexPage = (props) => {
 
   const initialPage = (
     <div className="starting_">
-      <button className="button_" type="submit" onClick={handleClick}>
         <WinningNumbers getNumbers={getNumbers} />
-        Click for the winning Lottery Numbers!
+      <button className="button_" type="submit" onClick={handleClick}> Thank you!
+        {/* Click for the winning Lottery Numbers! */}
       </button>
     </div>
   );
@@ -24,7 +24,7 @@ const IndexPage = (props) => {
   const winningPage = (
     <div className="starting_">
       <h2>The winning numbers are</h2>
-      <button onClick={handleClick} className="button_"> Thank you!</button>
+      <button onClick={handleClick} className="button_"> Click for winning numbers!</button>
     </div>
   );
   return (
