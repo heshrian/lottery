@@ -7,7 +7,7 @@ const WinningNumbers = (props) => {
   const generate = () => {
     for (let i = 0; i < 5; i++) {
       let num = Math.round(Math.random() * 90);
-      if (numbers.includes(num)) {
+      if (numbers.includes(num) || num === 0) {
         generate()
       } else {
         numbers.push(num);
